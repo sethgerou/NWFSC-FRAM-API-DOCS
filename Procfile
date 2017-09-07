@@ -1,1 +1,1 @@
-web: uwsgi -s /tmp/app.sock -w application:app
+web: uwsgi -s /tmp/application.sock -w application:app
