@@ -1,0 +1,28 @@
+<h1>Examples</h1>
+<p>Getting Started - Your First RESTful API Query</p>
+<p>
+The following URL shows a sample query for Petrale sole (scientific name = Eopsetta jordani), against the trawl survey catch data, from 2010 until 2012:
+</p>
+<h5>json output</h5>
+<button type="button" name="button" id="getex1" class="bluebtn">get</button>
+<span class="example-link" style="overflow:auto;">https://www.nwfsc.noaa.gov/data/api/v1/source/trawl.catch_fact/selection.json?filters=field_identified_taxonomy_dim$scientific_name=Eopsetta%20jordani,date_dim$year>=2010,date_dim$year<=2012
+&variables=date_yyyymmdd,field_identified_taxonomy_dim$scientific_name
+</span>
+<br><br>
+<p>Click the Get button and you should receive a stream of json-formatted data:</p>
+<div class="example" style="height:8em;overflow:auto;width:600px">
+{{ include 'ex1.html'}}
+</div>
+<br>
+<p>If you'd prefer a csv download of the data, change selection.json to selection.csv as follows:
+</p>
+<h5>csv output</h5>
+<button type="button" name="button" id="getex2" class="bluebtn">get</button>
+<span class="example-link" style="overflow:auto">https://www.nwfsc.noaa.gov/data/api/v1/source/trawl.catch_fact/selection.csv?filters=field_identified_taxonomy_dim$scientific_name=Eopsetta%20jordani,date_dim$year>=2010,date_dim$year<=2012
+&variables=date_yyyymmdd,field_identified_taxonomy_dim$scientific_name
+</span><br><br>
+<p>Click the Get button and you should receive a stream of csv-formatted data:</p>
+<div class="example" style="height:8em;overflow:auto;width:600px">
+{{ include 'ex2.html'}}
+</div>
+<br>

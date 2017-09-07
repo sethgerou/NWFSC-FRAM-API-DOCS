@@ -1,0 +1,85 @@
+<h1>Citation</h1>
+<p>The following language should be used to cite data retrieved from this website and using it in subsequent publication:</p>
+<p class="tab">
+<span style="font-style:italic">&lt;Dataset Citation Name&gt;, NOAA Fisheries, NWFSC/FRAM, 2725 Montlake Blvd. East, Seattle, WA 98112.</span>
+  </p>
+
+<p>Appropriate data set names include:</p>
+<div class="">
+  <table class="table table-striped" style="width:400px">
+    <tr><th>Layer Name</th><th>Dataset Citation Name</th></tr>
+    <tr><td>Acoustics Survey</td><td>Integrated Hake Acoustics Survey</td></tr>
+    <tr><td>Economics & Social Science Research</td><td>Economics & Social Science Research</td></tr>
+    <tr><td>Habitat</td><td>Marine Habitat Program</td></tr>
+    <tr><td>Hook & Line Survey</td><td>Southern California Hook and Line Survey</td></tr>
+    <tr><td>Observer Program</td><td>West Coast Groundfish Observer Program</td></tr>
+    <tr><td>Trawl Survey</td><td>West Coast Groundfish Bottom Trawl Survey</td></tr>
+  </table>
+</div>
+<br>
+<h5>Proper Usage</h5>
+<p>
+The ways in which data are collected across the different FRAM programs have been carefully designed to meet certain scientific and fisheries management requirements and standards. As a result, the data cannot necessarily be generally applied to other types of analysis without understanding these collection techniques and purposes. Below we attempt to describe some of these details in hopes that the data is well understood and used properly. If you have any questions regarding these usage descriptions, please contact us via the information contained in the Contact Us button (the i button).
+</p>
+<h5>Observer Program</h5>
+<p>
+The Observer program data are aggregated in order to release it in a publicly available form. We follow a rule of 3 calculation to ensure that no individual vessels can be uniquely identified in the data.
+</p>
+<h4>Trawl Survey</h4>
+<br>
+<h5>Catch</h5>
+<p>
+Each survey and study data series is largely self-contained and based upon statistical designs and collection procedures that are significantly different from the other series. Consequently, these data sets are not generally amenable to combined analyses in the interest of creating longer time series. It is best to look at the following field to distinguish between these different surveys and studies:</p>
+<p>
+  Project Name (as listed in the web application, actual variable name = project when querying directly via the API)
+<p/>
+<p>
+  The various data sets and time ranges are:
+</p>
+<table class="table table-striped" style="width:400px">
+  <tr>
+    <th style="width:200px">Project Name</th>
+    <th style="width:140px">Time Range</th>
+    <th>Status</th>
+  </tr>
+<tr>
+  <td>NWFSC Groundfish Slope and Shelf Combination Survey</td>
+  <td>2003-2015</td>
+  <td>Available</td>
+</tr>
+<tr>
+  <td>NWFSC Groundfish Slope Survey</td>
+  <td>1998-2002</td>
+  <td>Available</td>
+</tr>
+<tr>
+  <td>NWFSC Groundfish Shelf Survey</td>
+  <td>2001</td>
+  <td>Not Yet Available</td>
+</tr>
+<tr>
+  <td>NWFSC Groundfish Triennial Shelf Survey</td>
+  <td>1977-2004 (every 3 years)</td>
+  <td>Not Yet Available</td>
+</tr>
+<tr>
+  <td>NWFSC Santa Barbara Basin Study</td>
+  <td>2008</td>
+  <td>Available</td>
+</tr>
+<tr>
+  <td>NWFSC Video Study</td>
+  <td>2009</td>
+  <td>Available</td>
+</tr>
+<tr>
+  <td>AFSC Slope Survey 1984</td>
+  <td>1988-2001</td>
+  <td>Not Yet Available</td>
+</tr>
+</table>
+
+<h5>Stations</h5>
+
+<p>The trawl survey is performed within a grid of approximately 30,146 1.5nmi x 2.0nmi stations along the west coast (check the Trawl Survey > Station Grids layer to see a visual depiction of these). Most of these grid cells fall outside the defined depth range of the current slope/shelf combined survey and many have been removed from sampling due to protected area and other permitting restrictions. Currently we are left with 11,508 grid cells as candidate survey target stations. Therefore a grid that may have yielded catch from a given species in an earlier year will have zero probability of catch in later years if the grid has been removed from the sampling plan altogether. In such cases, data from tows made in grid cells that were subsequently removed from the survey design should not be included in data sets intended for trends analysis in order to prevent introducing bias into the results. One can quickly determine if and when a station was removed by examining the station removal date:
+Date Station Invalid (as listed in the web application, actual variable name = target_station_design_dim$date_stn_invalid_for_trawl_whid when querying directly via the API)</p>

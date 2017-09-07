@@ -1,0 +1,26 @@
+{{extend 'layout.html'}}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3 col-md-2 d-sm-block bg-light sidebar">
+      {{ include 'docnav.html' }}
+    </div>
+    <div class="col-sm-9 ml-sm-auto col-md-10 pt-3">
+      <div class="first-anchor" id="overview">
+        {{ include 'overview.html' }}
+      </div>
+      <div class="anchor" id="examples">
+        {{ include 'examples.html' }}
+      </div>
+      <div class="anchor" id="url-format">
+        {{ include 'url-format.html' }}
+      </div>
+      <div class="anchor" id="citation">
+          {{ include 'citation.html' }}
+      </div>
+      <div id="feedback">
+        {{ include 'feedback.html' }}
+      </div>
+    </div>
+  </div>
+</div>

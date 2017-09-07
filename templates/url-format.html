@@ -1,0 +1,37 @@
+<h1>URL Format</h1>
+<h5>Dissecting the URL</h5>
+<p>
+Now let's dissect the components of the URL to understand what is happening:</p>
+<img src="/static/QueryURL.png" alt="">
+<table class="table table-striped" style="width:800px">
+  <tr>
+    <th>Component</th><th>Description</th><th>Example</th>
+  </tr>
+  <tr><td>Base URL</td><td>Base URL for the API</td><td>https://www.nwfsc.noaa.gov/data/api/v1/source</td></tr>
+  <tr><td>Layer</td><td>Name of the layer you're querying.</td><td>trawl.catch_fact</td></tr>
+  <tr><td>Content</td><td>The type of content you want to receive. </td><td>selection.json</td></tr>
+  <tr><td>Query Filters</td><td>Starts with filters= then appended with a listing of comma separated key=value pairs</td><td>filters=field_identified_taxonomy_dim<wbr>$scientific_name=Eopsetta%20jordani,date_dim<wbr>$year>=2010,date_dim$year<=2012</td></tr>
+  <tr><td>Requested Variables</td><td>List of variables, comma separated</td><td>variables=date_yyyymmdd,field_identified_taxonomy_dim<wbr>$scientific_name</td></tr>
+  </table>
+
+<h5>Complete URL</h5>
+<span style="font-style: italic">https://www.nwfsc.noaa.gov/data/api/v1/source/trawl.catch_fact/selection.json?filters=field_identified_taxonomy_dim$scientific_name=Eopsetta%20jordani,date_dim$year%3E=2010,date_dim$year%3C=2012&variables=date_yyyymmdd,field_identified_taxonomy_dim$scientific_name</span><br><br>
+
+<p>It is important to note that the content type is followed by an ? symbol and between the filters and variables is an & symbol. Now it is simply a matter of identifying which layer you want to query, what are your query filters, and which variables you want to return from that query.</p>
+
+<div class="anchor" id="layer">
+  <h1>Layer</h1>
+  {{ include 'layer.html'}}
+</div>
+<div class="anchor" id="content">
+  <h1>Content</h1>
+  {{ include 'content.html'}}
+</div>
+<div class="anchor" id="filters">
+  <h1>Filters</h1>
+  {{ include 'filters.html'}}
+</div>
+<div class="anchor" id="variables">
+  <h1>Variables</h1>
+  {{ include 'variables.html'}}
+</div>
