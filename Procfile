@@ -1,1 +1,1 @@
-web: uwsgi -s /tmp/application.sock -w application:app
+web: gunicorn application:app
