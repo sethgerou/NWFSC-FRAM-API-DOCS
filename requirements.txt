@@ -20,4 +20,4 @@ tzlocal==1.4
 urllib3==1.22
 uWSGI==2.0.15
 weppy==1.1
-Werkzeug==0.12.2
+Werkzeug==0.15.3
